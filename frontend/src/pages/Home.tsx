@@ -53,12 +53,6 @@ const Home = () => {
         TODO <span>LIST</span>
       </h1>
 
-      {sortedTasks.length === 0 && (
-        <p style={{ color: "white", marginTop: "20px", fontSize: "20px" }}>
-          No tasks Available
-        </p>
-      )}
-
       <div className="sort-search-container">
         <input
           type="text"
@@ -100,6 +94,12 @@ const Home = () => {
           Pending
         </button>
       </div>
+
+      {sortedTasks.length === 0 && (
+        <p style={{ color: "white", marginTop: "20px", fontSize: "20px" }}>
+          No tasks Available
+        </p>
+      )}
 
       <div className={`tasks-container ${viewAll ? "grid" : "list"}`}>
         {displayedTasks.map((task) => (
