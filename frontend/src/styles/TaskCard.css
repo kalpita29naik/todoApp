@@ -42,7 +42,6 @@
   border: none;
 }
 
-/* Responsive adjustment for the List view button */
 @media (max-width: 480px) {
   .card-button-section button {
     padding: 8px 15px;

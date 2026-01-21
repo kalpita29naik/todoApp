@@ -55,9 +55,6 @@ const TaskDetail = () => {
         </div>
 
         <div className="detail-container">
-          {/* Status Section */}
-
-          {/* Title Section */}
           <div className="input-group">
             <label>TITLE</label>
             <input
@@ -67,7 +64,6 @@ const TaskDetail = () => {
             />
           </div>
 
-          {/* Description Section */}
           <div className="input-group">
             <label>DESCRIPTION</label>
             <textarea
@@ -79,7 +75,6 @@ const TaskDetail = () => {
             />
           </div>
 
-          {/* Action Buttons */}
           <div className="action-buttons">
             <button onClick={handleUpdate}>UPDATE</button>
             <button className="delete-btn" onClick={handleDelete}>

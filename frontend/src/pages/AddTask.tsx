@@ -36,7 +36,6 @@ const AddTask = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="detail-container-form">
-          {/* Title Section */}
           <div className="input-group">
             <label htmlFor="task-title">TITLE</label>
             <input
@@ -47,7 +46,7 @@ const AddTask = () => {
               required
             />
           </div>
-          {/* Description Section */}
+
           <div className="input-group">
             <label>
               DESCRIPTION
@@ -66,7 +65,7 @@ const AddTask = () => {
             <select
               id="status-select"
               className="status-dropdown"
-              value={task.completed.toString()} // Convert boolean to string for the select value
+              value={task.completed.toString()}
               onChange={(e) =>
                 setTask({ ...task, completed: e.target.value === "true" })
               }
@@ -75,7 +74,7 @@ const AddTask = () => {
               <option value="true">Completed</option>
             </select>
           </div>
-          {/* Action Buttons */}
+
           <div className="action-buttons">
             <button>Add Task</button>
           </div>

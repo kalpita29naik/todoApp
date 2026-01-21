@@ -42,7 +42,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-radius: 25px; /* Highly rounded as per Image 2 */
+  border-radius: 25px;
 }
 
 .tasks-container.grid {
@@ -58,14 +58,14 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  min-height: 450px; /* High vertical cards as per reference */
+  min-height: 450px; 
   height: 100%;
   border-radius: 20px;
   padding: 40px 25px;
-  justify-content: space-between; /* Pushes button to bottom, icon to top */
-  grid-template-columns: none; /* Disables the 3-column grid from TaskCard.css */
+  justify-content: space-between; 
+  grid-template-columns: none; 
 }
-/* 2. Center the icon section */
+
 .tasks-container.grid .card-icon-section {
   width: 100%;
   display: flex;
@@ -73,18 +73,18 @@ main {
   margin-bottom: 10px;
 }
 
-/* 3. Center and grow the text section to take middle space */
+
 .tasks-container.grid .card-text-section {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: start; /* Content starts below the icon */
+  justify-content: start; 
   align-items: center;
   padding: 20px 0;
   width: 100%;
 }
 
-/* 4. Ensure typography matches the vertical look */
+
 .tasks-container.grid .card-text-section h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -97,14 +97,90 @@ main {
   line-height: 1.6;
 }
 
-/* 5. Force the button section to stay at the very bottom */
+
 .tasks-container.grid .card-button-section {
   width: 100%;
-  margin-top: auto; /* Pushes to bottom of flex container */
+  margin-top: auto; 
 }
 
 .tasks-container.grid .card-button-section button {
-  width: 80%; /* Consistent button width in grid boxes */
+  width: 80%; 
+  justify-content: center;
+}
+
+.view-all-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.add-todo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 15px 15px;
+  background-color: #0f64a3;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.add-todo-container button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.filter-container {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.filter-container button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  font-size: 16px;
+}
+
+.filter-container button.active {
+  background-color: #0f64a3;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.sort-select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 12px 0;
+  border: none;
+  font-size: 14px;
+}
+
+.sort-search-container {
+  display: flex;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%; 
   justify-content: center;
 }
 
@@ -142,33 +218,12 @@ main {
   .heading {
     font-size: 2rem;
   }
-}
 
-.view-all-btn {
-  background: transparent;
-  color: white;
-  border: none;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.add-todo-container {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  padding: 15px 15px;
-  background-color: #0f64a3;
-  color: white;
-  cursor: pointer;
-  border-radius: 10px;
-  align-items: center;
-  justify-items: center;
-}
-
-.add-todo-container button {
-  background-color: transparent;
-  border: none;
-  color: white;
+  .sort-search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
 }
