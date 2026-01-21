@@ -70,3 +70,16 @@ export const deleteTask = (req: Request, res: Response) => {
   todoList.splice(index, 1);
   res.status(200).json({ message: "Task deleted Sucessfully" });
 };
+
+//get single task
+export const getSingleTask = (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const task = todoList.find((t) => t.id === id);
+
+  if (task) {
+    return res.status(200).json(task);
+  } else {
+    return res.status(404).json({ message: "Task not found" });
+  }
+};

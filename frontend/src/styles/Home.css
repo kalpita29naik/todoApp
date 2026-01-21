@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #2d2d2d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.heading {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.heading span {
+  color: #0f64a3;
+}
+
+.tasks-container {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.tasks-container.list {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+}
+
+.tasks-container.list .container {
+  width: 100%;
+  max-width: 700px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px; /* Highly rounded as per Image 2 */
+}
+
+.tasks-container.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.tasks-container.grid .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 450px; /* High vertical cards as per reference */
+  height: 100%;
+  border-radius: 20px;
+  padding: 40px 25px;
+  justify-content: space-between; /* Pushes button to bottom, icon to top */
+  grid-template-columns: none; /* Disables the 3-column grid from TaskCard.css */
+}
+/* 2. Center the icon section */
+.tasks-container.grid .card-icon-section {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 10px;
+}
+
+/* 3. Center and grow the text section to take middle space */
+.tasks-container.grid .card-text-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* Content starts below the icon */
+  align-items: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* 4. Ensure typography matches the vertical look */
+.tasks-container.grid .card-text-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.tasks-container.grid .card-text-section p {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  line-height: 1.6;
+}
+
+/* 5. Force the button section to stay at the very bottom */
+.tasks-container.grid .card-button-section {
+  width: 100%;
+  margin-top: auto; /* Pushes to bottom of flex container */
+}
+
+.tasks-container.grid .card-button-section button {
+  width: 80%; /* Consistent button width in grid boxes */
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .tasks-container.grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+  }
+
+  .tasks-container.list .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .tasks-container.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tasks-container.list .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    border-radius: 20px;
+  }
+
+  .tasks-container.grid .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+.view-all-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.add-todo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 15px 15px;
+  background-color: #0f64a3;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.add-todo-container button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
